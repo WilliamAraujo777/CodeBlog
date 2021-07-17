@@ -1,9 +1,6 @@
 package com.spring.codeblog.service;
 
 import java.util.List;
-
-import org.springframework.stereotype.Service;
-
 import com.spring.codeblog.model.Publicacao;
 
 public interface CodeBlogServices {
