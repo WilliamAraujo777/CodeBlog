@@ -1,6 +1,6 @@
 package com.spring.codeblog.controller;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +20,7 @@ public class CodeBlogController {
 	
 	@RequestMapping(value = "/pubs", method = RequestMethod.GET)
 	public ModelAndView getPubs() {
-		
-		ModelAndView mv = new ModelAndView("posts");
+		ModelAndView mv = new ModelAndView("pubs");
 		List<Publicacao> pubs = codeBlogServices.findAll();
 		mv.addObject("pubs", pubs);
 		return mv;
