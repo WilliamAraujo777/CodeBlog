@@ -1,1 +1,61 @@
-OLLAAAAAA
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head>
+
+	<title>MyCodeBlog</title>
+
+
+
+	<!--CSS BOOTSTRAP-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<header>
+		<nav class="navbar navbar-light bg-light">
+			<span class="navbar-brand mb-0 h1" style="font-weight: bold;"> MyCodeBlog</span>
+		</nav>
+	</header>
+
+	<section>
+		<div class="container" style="width: 60%; padding-bottom: 30px;">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb" style="background-color: white; padding-left: 0px;">
+					<li class="breadcrumb-item" aria-current="page"><a href="/pubs">Publicações</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Nova Publicação</li>
+				</ol>
+			</nav>
+
+			<div>
+				<form method="POST">
+					<div class="form-group">
+						<input type="text" class="form-control" name="titulo" placeholder="Titulo *">
+						<br>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="autor" placeholder="Autor *">
+						<br>
+					</div>
+
+					<textarea type="text" class="form-control" name="texto" placeholder="Texto *"></textarea>
+					
+					<small class="form-text text-muted">(*) Campos obrigatórios!</small> 
+					<br>
+					
+					<button type="submit" class="btn btn-primary" style="margin-top: 10px;">Publicar</button>
+					<a href="/pubs" class="btn btn-light" role="button" style="margin-top: 10px;">Cancelar</a>
+			
+				</form>
+			</div>
+
+		</div>
+	</section>
+
+
+</body>
+
+
+</html>
