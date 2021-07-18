@@ -28,9 +28,9 @@ public class CodeBlogController {
 	
 	@RequestMapping(value = "/pubs/{id}", method = RequestMethod.GET)
 	public ModelAndView getPubDetails(@PathVariable("id") long id) {
-		ModelAndView mv = new ModelAndView("pubs");
-		List<Publicacao> pubs = codeBlogServices.findAll();
-		mv.addObject("pubs", pubs);
+		ModelAndView mv = new ModelAndView("pubDetails");
+		Publicacao pub = codeBlogServices.findById(id);
+		mv.addObject("pubs", pub);
 		return mv;
 	}
 	
