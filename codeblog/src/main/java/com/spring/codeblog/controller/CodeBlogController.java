@@ -48,6 +48,7 @@ public class CodeBlogController {
 	@RequestMapping(value = "/newpub", method = RequestMethod.POST)
 	public String savePost(@Valid Publicacao pub, BindingResult result, RedirectAttributes attributes) {
 		if(result.hasErrors()) {
+			attributes.addFlashAttribute("msg", "Verifique se todos os campos obrigatórios foram preenchidos!");
 			return "redirect:/newpub";
 		}
 		
