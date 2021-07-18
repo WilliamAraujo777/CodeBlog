@@ -33,7 +33,7 @@
 						<span th:text="${pub.data_pub}"></span>
 					</p>
 
-					<a href="#">
+					<a th:href="${(#mvc.url('CBC#getPubDetails').arg(0, pub.id)).build()}">
 						<h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px;">
 							<span th:text="${pub.titulo}"></span>
 						</h4>

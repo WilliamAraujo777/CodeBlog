@@ -30,8 +30,12 @@ public class CodeBlogController {
 	public ModelAndView getPubDetails(@PathVariable("id") long id) {
 		ModelAndView mv = new ModelAndView("pubDetails");
 		Publicacao pub = codeBlogServices.findById(id);
-		mv.addObject("pubs", pub);
+		mv.addObject("pub", pub);
 		return mv;
 	}
 	
+	@RequestMapping(value = "/newpub", method = RequestMethod.GET)
+	public String getPubForm() {
+		return "pubForm";
+	}
 }
